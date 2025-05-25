@@ -5,6 +5,25 @@
 }
 body {
     background-color: #2f3436;
+    background-image: url(pics/body2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(pics/body2.jpeg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+    opacity: 0.7;
 }
 .section-m{
     margin-left: 70px;
@@ -64,4 +83,73 @@ marquee{
 .nav-links a{
     color: #fff;
     text-decoration: none;
+}
+.hero .image-container{
+    padding-top: 30px;
+    position: relative;
+    display: inline-block;
+    align-items: center;
+}
+.hero{
+    display: flex;
+}
+@media (max-width: 480px) {
+    .hero{
+        display: block;
+    }
+}
+@media (min-width: 481px) and  (max-width: 768px) {
+    .hero{
+        display: block;
+    }
+}
+@media (max-width: 480px) {
+    .hero .image-container{
+        width: 275px;
+        display: block;
+    }
+}
+.hero .image-container img{
+    width: 600px;
+    border-radius: 20px;
+}
+@media (max-width: 480px) {
+    .hero .image-container img{
+        width: 275px;
+    }
+}
+.hero .image-container .describe{
+    font-size: 0.86rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 5px;
+    color: #2f3436;
+}
+@media (max-width: 480px) {
+    .hero .image-container .describe{
+        font-size: 0.7rem;
+        padding: 1px;
+    }
+}
+@media (min-width: 481px) and  (max-width: 768px) {
+    .hero .image-container .describe{
+        font-size: 0.9rem;
+        padding: 2px;
+    }
+}
+.hero .message{
+    padding-left: 30px;
+    padding-top: 70px;
+    color: #ff3737;
+    font-size: 2rem;
+}
+@media (max-width: 480px) {
+    .hero .message{
+        padding-top: 10px;
+        font-size: 1.rem;
+    }
 }
