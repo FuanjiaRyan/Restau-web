@@ -31,7 +31,7 @@ body::before{
 }
 marquee{
     font-size: 30px;
-    color: #ff3737;
+    color: #fff;
     font-weight: bold;
     padding-bottom: 10px;
 }
@@ -152,4 +152,36 @@ marquee{
         padding-top: 10px;
         font-size: 1.rem;
     }
+}
+.buttons{
+    display: flex;
+    padding-top: 30px;
+    padding-left: 200px;
+}
+@media (max-width: 480px) {
+    .buttons{
+        padding: 0;
+        display: block;
+        text-align: center;
+    }
+}
+.buttons .button{
+    padding: 20px;
+}
+.buttons .button a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.buttons .button a button{
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #ff3737;
+    color: #fff;
+    transition: transform 0.5s ease-in-out;
+}
+.buttons .button a :hover{
+    transform: translateY(-20px);
+    box-shadow: 0px 20px 20px rgb(0, 0, 0);
 }
